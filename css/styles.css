@@ -493,8 +493,7 @@ img {
   align-items: center;
 }
 
-.footer-social-media h3,
-.subscription-title {
+.footer-social-media h3 {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -517,6 +516,16 @@ img {
 }
 .subscription {
   margin-left: 89px;
+}
+.subscription-title {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 20px;
 }
 .subscription-input {
   width: 358px;
