@@ -230,6 +230,7 @@ img {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  border: 0;
   box-shadow: 0px 4px 4px var(--box-shadow-color);
   border-radius: 4px;
   cursor: pointer;
@@ -446,12 +447,14 @@ img {
   display: flex;
   align-items: baseline;
 }
+.contact-info {
+  margin-right: 70px;
+}
 .address-list {
   width: 231px;
 }
 .addres-info {
-  margin-top: 20px;
-  margin-right: 70px;
+  margin-top: 20px
 }
 
 .address-item:not(:first-child) {
@@ -715,16 +718,18 @@ img {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: opacity, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
-.is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
 
-.backdrop .is-hidden .modal {
+.backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.8);
 }
 
@@ -765,7 +770,7 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 .form {
-  margin: 40px auto;
+  padding: 40px;
 }
 .form-title{
   font-weight: 700;
@@ -776,12 +781,7 @@ img {
   color: var(--title-color);
   margin-bottom: 12px;
 }
-.form-fields {
-  margin-right: auto;
-  margin-left: auto;
-  width: 448px;
-  height: 342px;
-}
+
 .form-label {
   position: relative;
   display: flex;
@@ -809,9 +809,7 @@ img {
 }
 .form-label-textarea {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  width: 448px;
+  flex-direction: column;;
   height: 120px;
   
   font-size: 12px;
@@ -849,11 +847,10 @@ img {
 .checkbox-lable {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 20px auto 30px;
-  width: 423px;
-  height: 24px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.714px;
   letter-spacing: 0.03em;
@@ -869,6 +866,7 @@ img {
   display: inline-block;
   width: 16px;
   height: 15px;
+  margin-right: 7px;
   background-image: url(../images/check.svg);
 }
 .checkbox-input:checked + .checkbox-icon {
